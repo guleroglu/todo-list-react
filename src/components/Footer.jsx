@@ -1,6 +1,6 @@
 import React from "react";
 
-const Footer = ({ setStatus, filteredTodos }) => {
+const Footer = ({ setStatus, filteredTodos, setFilteredTodos, todos, setTodos }) => {
   const statusHandler = (e) => {
     setStatus(e.target.innerHTML.toLowerCase());
   };
@@ -24,7 +24,10 @@ const Footer = ({ setStatus, filteredTodos }) => {
         </li>
       </ul>
 
-      <button className="clear-completed">Clear completed</button>
+      <button className="clear-completed" onClick={() => {
+        let completed = todos.filter((todo) => todo.completed !== true);
+        setTodos(completed);
+      }}>Clear completed</button>
     </footer>
   );
 };

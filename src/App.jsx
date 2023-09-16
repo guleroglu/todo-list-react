@@ -44,6 +44,8 @@ function App() {
         filteredTodos={filteredTodos}
       />
       <Footer
+        todos={todos}
+        setTodos={setTodos}
         setStatus={setStatus}
         filteredTodos={filteredTodos}
         setFilteredTodos={setFilteredTodos}
