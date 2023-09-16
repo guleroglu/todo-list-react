@@ -1,6 +1,6 @@
 import React from "react";
 
-const Footer = ({ setStatus }) => {
+const Footer = ({ setStatus, filteredTodos }) => {
   const statusHandler = (e) => {
     setStatus(e.target.innerHTML.toLowerCase());
   };
@@ -8,8 +8,7 @@ const Footer = ({ setStatus }) => {
   return (
     <footer className="footer">
       <span className="todo-count">
-        <strong>0</strong>
-        items left
+        <strong>{filteredTodos.length}</strong> items left
       </span>
 
       <ul className="filters">
